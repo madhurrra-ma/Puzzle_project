@@ -4,7 +4,7 @@ An interactive web application that visualizes the **N-Queens Problem** using th
 
 ## 🚀 Live Demo
 
-🔗 https://your-live-demo-link.netlify.app/
+🔗 https://cool-daifuku-0c82f7.netlify.app/
 
 ## 📸 Preview
 
