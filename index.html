@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>N-Queens Visualizer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark">
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+
+            <h1>♛ N-Queens Visualizer</h1>
+
+            <p>
+                Learn the Backtracking Algorithm through Visualization
+            </p>
+
+        </header>
+
+        <!-- ================= CONTROLS ================= -->
+
+        <section class="controls">
+
+            <div class="input-group">
+
+                <label for="nValue">
+                    Board Size
+                </label>
+
+                <input
+                    id="nValue"
+                    type="number"
+                    min="4"
+                    max="12"
+                    value="8">
+
+            </div>
+
+            <div class="input-group">
+
+                <label for="speed">
+
+                    Animation Speed
+
+                </label>
+
+                <input
+                    id="speed"
+                    type="range"
+                    min="50"
+                    max="1000"
+                    step="50"
+                    value="300">
+
+            </div>
+
+            <div class="buttons">
+
+                <button id="solveBtn">
+                    ▶ Solve
+                </button>
+
+                <button id="pauseBtn">
+                    ⏸ Pause
+                </button>
+
+                <button id="resetBtn">
+                     Reset
+                </button>
+
+                <button id="themeBtn">
+                     Theme
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats">
+
+            <div class="card">
+
+                <h3>Steps</h3>
+
+                <span id="steps">
+                    0
+                </span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Backtracks</h3>
+
+                <span id="backtracks">
+                    0
+                </span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Queens</h3>
+
+                <span id="queenCount">
+                    0
+                </span>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Time</h3>
+
+                <span id="time">
+                    0 ms
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- ================= MAIN ================= -->
+
+        <main>
+
+            <!-- Chess Board -->
+
+            <section class="board-section">
+
+                <div id="board">
+
+                </div>
+
+            </section>
+
+            <!-- Right Panel -->
+
+            <aside class="side-panel">
+
+                <div class="card">
+
+                    <h2>Status</h2>
+
+                    <p id="status">
+
+                        Ready
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>Current Position</h2>
+
+                    <p>
+
+                        Row :
+                        <span id="currentRow">
+                            -
+                        </span>
+
+                    </p>
+
+                    <p>
+
+                        Column :
+                        <span id="currentCol">
+                            -
+                        </span>
+
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>Algorithm Log</h2>
+
+                    <div id="logBox">
+
+                        Waiting to start...
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>Legend</h2>
+
+                    <div class="legend">
+
+                        <div>
+
+                            <span class="legend-box checking"></span>
+
+                            Checking
+
+                        </div>
+
+                        <div>
+
+                            <span class="legend-box safe-cell"></span>
+
+                            Safe
+
+                        </div>
+
+                        <div>
+
+                            <span class="legend-box unsafe-cell"></span>
+
+                            Unsafe
+
+                        </div>
+
+                        <div>
+
+                            <span class="legend-box backtrack-cell"></span>
+
+                            Backtracking
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <p>
+
+                Built with HTML, CSS & JavaScript
+
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="solver.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

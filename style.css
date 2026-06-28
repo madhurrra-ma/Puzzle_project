@@ -1,0 +1,539 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   THEME VARIABLES
+=========================== */
+
+:root{
+
+    --bg:#f3f4f6;
+    --panel:#ffffff;
+    --text:#111827;
+    --subtext:#6b7280;
+
+    --border:#d1d5db;
+
+    --white:#f0d9b5;
+    --black:#b58863;
+
+    --green:#22c55e;
+    --red:#ef4444;
+    --yellow:#facc15;
+    --blue:#3b82f6;
+
+    --shadow:rgba(0,0,0,.12);
+}
+
+body.dark{
+
+    --bg:#0f172a;
+    --panel:#1e293b;
+    --text:#ffffff;
+    --subtext:#94a3b8;
+
+    --border:#334155;
+
+    --shadow:rgba(0,0,0,.4);
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+
+    background:var(--bg);
+    color:var(--text);
+
+    transition:.3s;
+
+    min-height:100vh;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:min(1400px,95%);
+
+    margin:auto;
+
+    padding:25px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+}
+
+header h1{
+
+    font-size:42px;
+}
+
+header p{
+
+    color:var(--subtext);
+
+    margin-top:8px;
+}
+
+/* ===========================
+   CONTROLS
+=========================== */
+
+.controls{
+
+    background:var(--panel);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    box-shadow:0 5px 15px var(--shadow);
+
+    margin-bottom:25px;
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+}
+
+.input-group label{
+
+    font-weight:500;
+}
+
+input[type="number"]{
+
+    width:90px;
+
+    padding:10px;
+
+    border:1px solid var(--border);
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    background:transparent;
+
+    color:var(--text);
+}
+
+input[type="range"]{
+
+    width:220px;
+
+    cursor:pointer;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+}
+
+button{
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.25s;
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+}
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+}
+
+#solveBtn{
+
+    background:#16a34a;
+}
+
+#pauseBtn{
+
+    background:#d97706;
+}
+
+#resetBtn{
+
+    background:#dc2626;
+}
+
+#themeBtn{
+
+    background:#2563eb;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+    margin-bottom:30px;
+}
+
+.card{
+
+    background:var(--panel);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    box-shadow:0 5px 15px var(--shadow);
+}
+
+.card h2,
+.card h3{
+
+    margin-bottom:10px;
+}
+
+.card span{
+
+    font-size:28px;
+
+    font-weight:bold;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main{
+
+    display:grid;
+
+    grid-template-columns:700px 1fr;
+
+    gap:30px;
+}
+
+/* ===========================
+   BOARD
+=========================== */
+
+.board-section{
+
+    display:flex;
+
+    justify-content:center;
+}
+
+#board{
+
+    width:700px;
+    height:700px;
+
+    display:grid;
+
+    border:6px solid var(--border);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px var(--shadow);
+}
+
+.cell{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:42px;
+
+    transition:.2s;
+
+    user-select:none;
+}
+
+.white{
+
+    background:var(--white);
+}
+
+.black{
+
+    background:var(--black);
+}
+
+/* ===========================
+   QUEEN
+=========================== */
+
+.queen{
+
+    color:#e11d48;
+
+    font-size:50px;
+
+    animation:pop .25s ease;
+}
+
+@keyframes pop{
+
+    from{
+
+        transform:scale(.2);
+        opacity:0;
+    }
+
+    to{
+
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* ===========================
+   CELL STATES
+=========================== */
+
+.checking{
+
+    background:var(--yellow)!important;
+}
+
+.safe-cell{
+
+    background:var(--green)!important;
+}
+
+.unsafe-cell{
+
+    background:var(--red)!important;
+}
+
+.backtrack-cell{
+
+    background:var(--blue)!important;
+}
+
+/* ===========================
+   SIDE PANEL
+=========================== */
+
+.side-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+/* ===========================
+   LOG
+=========================== */
+
+#logBox{
+
+    height:260px;
+
+    overflow-y:auto;
+
+    background:#111827;
+
+    color:#e5e7eb;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    font-size:14px;
+}
+
+body:not(.dark) #logBox{
+
+    background:#f8fafc;
+
+    color:#111827;
+}
+
+#logBox p{
+
+    margin-bottom:6px;
+}
+
+/* ===========================
+   LEGEND
+=========================== */
+
+.legend{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.legend div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+}
+
+.legend-box{
+
+    width:20px;
+    height:20px;
+
+    border-radius:4px;
+}
+
+.legend-box.checking{
+
+    background:var(--yellow);
+}
+
+.legend-box.safe-cell{
+
+    background:var(--green);
+}
+
+.legend-box.unsafe-cell{
+
+    background:var(--red);
+}
+
+.legend-box.backtrack-cell{
+
+    background:var(--blue);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:var(--subtext);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+    main{
+
+        grid-template-columns:1fr;
+    }
+
+    #board{
+
+        width:600px;
+        height:600px;
+
+        margin:auto;
+    }
+}
+
+@media(max-width:700px){
+
+    .stats{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .controls{
+
+        flex-direction:column;
+    }
+
+    #board{
+
+        width:90vw;
+        height:90vw;
+    }
+
+    .cell{
+
+        font-size:28px;
+    }
+
+    .queen{
+
+        font-size:34px;
+    }
+}
