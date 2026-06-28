@@ -64,69 +64,12 @@ This project uses the **Backtracking Algorithm**.
 
 ---
 
-## 📂 Project Structure
 
-```
-N-Queens-Visualizer/
-│── index.html
-│── style.css
-│── script.js
-│── solver.js
-│── README.md
-```
 
----
-
-## 💻 Running Locally
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/your-username/N-Queens-Visualizer.git
-```
-
-2. Open the project folder
-
-```bash
-cd N-Queens-Visualizer
-```
-
-3. Open `index.html` in your browser.
-
-Or use the VS Code Live Server extension.
-
----
-
-## How to Use
-
-1. Select the board size.
-2. Adjust the animation speed.
-3. Click **Start Visualization**.
-4. Watch the algorithm place queens and backtrack.
-5. Use Pause/Resume or Reset anytime.
-
----
-
-## Screenshots
-
-### Home
-
-(Add image)
-
-### Visualization
-
-(Add image)
-
-### Solution Found
-
-(Add image)
-
----
 
 ## Future Improvements
 
 - Multiple solution visualization
-- Dark/Light theme toggle
 - Save board as image
 - Display recursion tree
 - Compare with other solving approaches
@@ -138,11 +81,7 @@ Or use the VS Code Live Server extension.
 
 **Madhura Melgiri**
 
-- GitHub: https://github.com/your-username
-- LinkedIn: https://linkedin.com/in/your-profile
+- GitHub: https://github.com/madhurrra-ma
 
 ---
 
-##  If you found this project useful
-
-Give this repository a ⭐ on GitHub!
