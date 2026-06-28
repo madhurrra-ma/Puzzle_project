@@ -6,13 +6,10 @@ An interactive web application that visualizes the **N-Queens Problem** using th
 
 🔗 https://cool-daifuku-0c82f7.netlify.app/
 
-## 📸 Preview
-
-(Add screenshots or GIFs here)
 
 ---
 
-## 📖 About the Project
+##  About the Project
 
 The N-Queens Problem is a classic backtracking problem where **N queens** must be placed on an **N × N chessboard** such that no two queens attack each other.
 
@@ -20,23 +17,23 @@ This visualizer allows users to watch the algorithm execute step by step, making
 
 ---
 
-## ✨ Features
+##  Features
 
-- ♛ Interactive chessboard visualization
-- 🎯 Adjustable board size (4–12)
-- ▶️ Play, Pause, Resume, and Reset controls
-- ⏱️ Adjustable animation speed
-- 📊 Real-time statistics
+- Interactive chessboard visualization
+- Adjustable board size (4–12)
+- Play, Pause, Resume, and Reset controls
+- Adjustable animation speed
+- Real-time statistics
   - Steps executed
   - Backtracks
   - Queens placed
   - Execution time
-- 🌙 Clean and responsive UI
-- 📱 Works on desktop and mobile browsers
+- Clean and responsive UI
+- Works on desktop and mobile browsers
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - HTML5
 - CSS3
@@ -44,7 +41,7 @@ This visualizer allows users to watch the algorithm execute step by step, making
 
 ---
 
-## 🧠 Algorithm
+## Algorithm
 
 This project uses the **Backtracking Algorithm**.
 
@@ -100,7 +97,7 @@ Or use the VS Code Live Server extension.
 
 ---
 
-## 🎮 How to Use
+## How to Use
 
 1. Select the board size.
 2. Adjust the animation speed.
@@ -110,7 +107,7 @@ Or use the VS Code Live Server extension.
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Home
 
@@ -126,7 +123,7 @@ Or use the VS Code Live Server extension.
 
 ---
 
-## 🎯 Future Improvements
+## Future Improvements
 
 - Multiple solution visualization
 - Dark/Light theme toggle
@@ -137,7 +134,7 @@ Or use the VS Code Live Server extension.
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Madhura Melgiri**
 
@@ -146,6 +143,6 @@ Or use the VS Code Live Server extension.
 
 ---
 
-## ⭐ If you found this project useful
+##  If you found this project useful
 
 Give this repository a ⭐ on GitHub!
